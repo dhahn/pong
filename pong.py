@@ -21,14 +21,14 @@ rect_paddle1.top = 0
 rect_paddle2.left = 150
 rect_paddle2.top = 375
 
-hspeed = 0
-vspeed = 0
-while hspeed == 0:
-    hspeed = random.randint(-1, 1)
-    hspeed = hspeed
-while vspeed == 0:
-    vspeed = random.randint(-1, 1)
-    vpseed = vspeed
+hspeed = 3
+vspeed = 3
+# while hspeed == 0:
+#     hspeed = random.randint(-1, 5)
+#     hspeed = hspeed
+# while vspeed == 0:
+#     vspeed = random.randint(-1, 5)
+#     vpseed = vspeed
 slower = 1
 
 run = True
@@ -86,19 +86,19 @@ while run:
     if keys[pygame.K_LEFT]:
         #left is pressed
         if (rect_paddle1.left > 0):
-            rect_paddle1.left -= 1
+            rect_paddle1.left -= 3
     if keys[pygame.K_RIGHT]:
         #a is pressed
         if (rect_paddle1.right < 400):
-            rect_paddle1.left += 1
+            rect_paddle1.left += 3
     if keys[pygame.K_s]:
         #a is pressed
         if (rect_paddle2.right < 400):
-            rect_paddle2.left += 1
+            rect_paddle2.left += 3
     if keys[pygame.K_a]:
         #a is pressed
         if (rect_paddle2.left > 0):
-            rect_paddle2.left -= 1
+            rect_paddle2.left -= 3
     for event in pygame.event.get():
         if event.type == QUIT:
             run = False
